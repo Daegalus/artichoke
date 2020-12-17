@@ -1,7 +1,8 @@
-use artichoke_core::intern::Intern;
 use core::convert::TryInto;
 use core::iter::FusedIterator;
 use core::ops::Range;
+
+use artichoke_core::intern::Intern;
 
 use crate::Symbol;
 
@@ -205,10 +206,12 @@ impl FusedIterator for AllSymbols {}
 
 #[cfg(test)]
 mod tests {
+    use alloc::borrow::Cow;
+
+    use artichoke_core::intern::Intern;
+
     use super::InternerAllSymbols;
     use crate::Symbol;
-    use alloc::borrow::Cow;
-    use artichoke_core::intern::Intern;
 
     #[derive(Default, Debug, Clone, Copy, Hash, PartialEq, Eq, PartialOrd, Ord)]
     struct Interner(u32);

@@ -7,6 +7,7 @@ use std::error;
 use std::ffi::{OsStr, OsString};
 use std::io;
 use std::path::{Path, PathBuf};
+
 use structopt::StructOpt;
 use termcolor::WriteColor;
 

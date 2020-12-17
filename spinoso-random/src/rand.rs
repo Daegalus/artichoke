@@ -1,4 +1,5 @@
 use core::fmt;
+
 use rand_::Rng;
 
 use crate::{ArgumentError, Random};

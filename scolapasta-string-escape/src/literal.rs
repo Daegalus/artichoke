@@ -567,8 +567,9 @@ impl FusedIterator for Literal {}
 /// ```
 #[cfg(test)]
 mod tests {
-    use super::Literal;
     use alloc::string::String;
+
+    use super::Literal;
 
     #[test]
     fn exhaustive() {

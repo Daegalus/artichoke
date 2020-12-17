@@ -41,9 +41,10 @@
 //!     <programfile>
 //! ```
 
-use artichoke::ruby;
 use std::io::{self, Write};
 use std::process;
+
+use artichoke::ruby;
 use termcolor::{ColorChoice, StandardStream, WriteColor};
 
 fn main() {

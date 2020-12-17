@@ -57,9 +57,10 @@ impl<'a> TryConvertMut<Value, &'a str> for Artichoke {
 // Convert<String> is implemented in terms of Convert<&str> so only implement
 // the tests for String to exercise both code paths.
 mod tests {
-    use quickcheck_macros::quickcheck;
     use std::convert::TryFrom;
     use std::slice;
+
+    use quickcheck_macros::quickcheck;
 
     use crate::test::prelude::*;
 

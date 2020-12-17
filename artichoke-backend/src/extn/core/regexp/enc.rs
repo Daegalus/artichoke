@@ -1,9 +1,10 @@
 //! Parse encoding parameter to `Regexp#initialize` and `Regexp::compile`.
 
-use bstr::ByteSlice;
 use std::error;
 use std::fmt;
 use std::hash::{Hash, Hasher};
+
+use bstr::ByteSlice;
 
 use crate::extn::core::regexp;
 use crate::extn::prelude::*;

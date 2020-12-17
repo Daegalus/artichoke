@@ -4,13 +4,14 @@
 //! Each function on `Regexp` is implemented as its own module which contains
 //! the `Args` struct for invoking the function.
 
-use bstr::BString;
 use std::borrow::Cow;
 use std::collections::hash_map::DefaultHasher;
 use std::convert::TryFrom;
 use std::hash::{Hash, Hasher};
 use std::num::NonZeroUsize;
 use std::str;
+
+use bstr::BString;
 
 use crate::extn::core::array::Array;
 use crate::extn::prelude::*;
@@ -24,14 +25,13 @@ pub mod pattern;
 pub mod syntax;
 pub mod trampoline;
 
-pub use backend::{NilableString, RegexpType, Scan};
-pub use enc::Encoding;
-pub use opts::{Options, RegexpOption};
-
 use backend::lazy::Lazy;
 #[cfg(feature = "core-regexp-oniguruma")]
 use backend::onig::Onig;
 use backend::regex::utf8::Utf8;
+pub use backend::{NilableString, RegexpType, Scan};
+pub use enc::Encoding;
+pub use opts::{Options, RegexpOption};
 
 pub type NameToCaptureLocations = Vec<(Vec<u8>, Vec<Int>)>;
 

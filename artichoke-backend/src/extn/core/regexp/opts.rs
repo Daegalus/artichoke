@@ -1,7 +1,8 @@
 //! Parse options parameter to `Regexp#initialize` and `Regexp::compile`.
 
-use bstr::ByteSlice;
 use std::fmt;
+
+use bstr::ByteSlice;
 
 use crate::extn::core::regexp;
 use crate::extn::prelude::*;

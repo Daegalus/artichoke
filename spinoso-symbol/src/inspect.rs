@@ -1,6 +1,7 @@
 use core::convert::TryFrom;
 use core::fmt;
 use core::iter::FusedIterator;
+
 use scolapasta_string_escape::{is_ascii_char_with_escape, Literal};
 
 use crate::ident::IdentifierType;
@@ -456,8 +457,9 @@ impl<'a> FusedIterator for State<'a> {}
 
 #[cfg(test)]
 mod tests {
-    use super::Inspect;
     use alloc::string::String;
+
+    use super::Inspect;
 
     #[test]
     fn empty() {
@@ -753,8 +755,9 @@ mod tests {
 
 #[cfg(test)]
 mod specs {
-    use super::{Flags, Inspect};
     use alloc::string::String;
+
+    use super::{Flags, Inspect};
 
     #[test]
     fn flags_ident() {

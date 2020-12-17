@@ -1,7 +1,8 @@
 //! Regexp pattern parsers.
 
-use bstr::ByteSlice;
 use std::iter;
+
+use bstr::ByteSlice;
 
 use crate::extn::core::regexp::{Options, RegexpOption};
 
